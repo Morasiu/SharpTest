@@ -1,0 +1,403 @@
+Mono: Config attempting to parse: '/etc/mono/config'.
+Mono: Config attempting to parse: '/home/hubert/.mono/config'.
+Mono: process_set_name: using [bin/Debug/SharpTest.exe] as prog name
+Mono: mono_w32handle_new: create Process handle 0x400
+Mono: Assembly Loader probing location: '/usr/lib/mono/4.5/mscorlib.dll'.
+Mono: Image addref mscorlib[0x558fa0b3d860] -> /usr/lib/mono/4.5/mscorlib.dll[0x558fa0b3c460]: 2
+Mono: Prepared to set up assembly 'mscorlib' (/usr/lib/mono/4.5/mscorlib.dll)
+Mono: Found assembly remapping for mscorlib and was for the same version 4.0.0.0
+Mono: Found assembly remapping for mscorlib and was for the same version 4.0.0.0
+Mono: Assembly Loader probing location: '/usr/lib/mono/4.5/mscorlib.dll'.
+Mono: AOT: image '/usr/lib/mono/4.5/mscorlib.dll.so' found.
+Mono: Assembly Loader loaded assembly from location: '/usr/lib/mono/4.5/mscorlib.dll'.
+Mono: Config attempting to parse: '/usr/lib/mono/4.5/mscorlib.dll.config'.
+Mono: Config attempting to parse: '/etc/mono/assemblies/mscorlib/mscorlib.config'.
+Mono: AOT: FOUND method System.OutOfMemoryException:.ctor (string) [0x7fecd7019ce0 - 0x7fecd7019d02 0x7fecd737ca78]
+Mono: AOT NOT FOUND: (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___object (object,intptr,intptr,intptr).
+Mono: AOT: FOUND method System.Exception:.cctor () [0x7fecd6ffcbf0 - 0x7fecd6ffcc17 0x7fecd737beed]
+Mono: AOT NOT FOUND: (wrapper runtime-invoke) object:runtime_invoke_void (object,intptr,intptr,intptr).
+Mono: AOT NOT FOUND: (wrapper alloc) object:AllocSmall (intptr,intptr).
+Mono: AOT: FOUND method System.Exception:Init () [0x7fecd6ffb230 - 0x7fecd6ffb294 0x7fecd737bd6d]
+Mono: AOT: FOUND method System.NullReferenceException:.ctor (string) [0x7fecd7016ac0 - 0x7fecd7016ae2 0x7fecd737c9b6]
+Mono: AOT: FOUND method System.StackOverflowException:.ctor (string) [0x7fecd70271a0 - 0x7fecd70271c2 0x7fecd737d180]
+Mono: Assembly mscorlib[0x558fa0b3d860] added to domain SharpTest.exe, ref_count=1
+Mono: Assembly Loader probing location: 'bin/Debug/SharpTest.exe'.
+Mono: Image addref SharpTest[0x558fa0b98a60] -> /home/hubert/SharpTest/SharpTest/bin/Debug/SharpTest.exe[0x558fa0b3adc0]: 3
+Mono: Prepared to set up assembly 'SharpTest' (/home/hubert/SharpTest/SharpTest/bin/Debug/SharpTest.exe)
+Mono: Assembly SharpTest[0x558fa0b98a60] added to domain SharpTest.exe, ref_count=1
+Mono: AOT: image '/home/hubert/SharpTest/SharpTest/bin/Debug/SharpTest.exe.so' not found: /home/hubert/SharpTest/SharpTest/bin/Debug/SharpTest.exe.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu
+Mono: AOT: image '/usr/lib/mono/aot-cache/amd64/SharpTest.exe.so' not found: /usr/lib/mono/aot-cache/amd64/SharpTest.exe.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu
+Mono: Assembly Loader loaded assembly from location: 'bin/Debug/SharpTest.exe'.
+Mono: Config attempting to parse: '/home/hubert/SharpTest/SharpTest/bin/Debug/SharpTest.exe.config'.
+Mono: Config attempting to parse: '/etc/mono/assemblies/SharpTest/SharpTest.config'.
+Mono: Assembly Loader probing location: 'bin/Debug/SharpTest.exe'.
+Mono: AOT: image '/home/hubert/SharpTest/SharpTest/bin/Debug/SharpTest.exe.so' not found: /home/hubert/SharpTest/SharpTest/bin/Debug/SharpTest.exe.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu
+Mono: AOT: image '/usr/lib/mono/aot-cache/amd64/SharpTest.exe.so' not found: /usr/lib/mono/aot-cache/amd64/SharpTest.exe.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu
+Mono: Found assembly remapping for mscorlib and was for the same version 4.0.0.0
+Mono: Found assembly remapping for mscorlib and was for the same version 4.0.0.0
+Mono: Assembly Ref addref SharpTest[0x558fa0b98a60] -> mscorlib[0x558fa0b3d860]: 2
+Mono: Config attempting to parse: '/home/hubert/SharpTest/SharpTest/bin/Debug/SharpTest.exe.config'.
+Mono: Domain SharpTest.exe search path is:
+Mono: 	path[0] = '/home/hubert/SharpTest/SharpTest/bin/Debug/'
+Mono: End of domain SharpTest.exe search path.
+Mono: Assembly Loader probing location: '/home/hubert/SharpTest/SharpTest/bin/Debug/gtk-sharp.dll'.
+Mono: Image addref gtk-sharp[0x558fa0ba28e0] -> /home/hubert/SharpTest/SharpTest/bin/Debug/gtk-sharp.dll[0x558fa0ba1900]: 2
+Mono: Prepared to set up assembly 'gtk-sharp' (/home/hubert/SharpTest/SharpTest/bin/Debug/gtk-sharp.dll)
+Mono: Assembly gtk-sharp[0x558fa0ba28e0] added to domain SharpTest.exe, ref_count=1
+Mono: AOT: image '/home/hubert/SharpTest/SharpTest/bin/Debug/gtk-sharp.dll.so' not found: /home/hubert/SharpTest/SharpTest/bin/Debug/gtk-sharp.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu
+Mono: AOT: image '/usr/lib/mono/aot-cache/amd64/gtk-sharp.dll.so' not found: /usr/lib/mono/aot-cache/amd64/gtk-sharp.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu
+Mono: Assembly Loader loaded assembly from location: '/home/hubert/SharpTest/SharpTest/bin/Debug/gtk-sharp.dll'.
+Mono: Config attempting to parse: '/home/hubert/SharpTest/SharpTest/bin/Debug/gtk-sharp.dll.config'.
+Mono: Config attempting to parse: '/etc/mono/assemblies/gtk-sharp/gtk-sharp.config'.
+Mono: Assembly Ref addref SharpTest[0x558fa0b98a60] -> gtk-sharp[0x558fa0ba28e0]: 2
+Mono: Domain SharpTest.exe search path is:
+Mono: 	path[0] = '/home/hubert/SharpTest/SharpTest/bin/Debug/'
+Mono: End of domain SharpTest.exe search path.
+Mono: Assembly Loader probing location: '/home/hubert/SharpTest/SharpTest/bin/Debug/glib-sharp.dll'.
+Mono: Image addref glib-sharp[0x558fa0bb05b0] -> /home/hubert/SharpTest/SharpTest/bin/Debug/glib-sharp.dll[0x558fa0baf4e0]: 2
+Mono: Prepared to set up assembly 'glib-sharp' (/home/hubert/SharpTest/SharpTest/bin/Debug/glib-sharp.dll)
+Mono: Assembly glib-sharp[0x558fa0bb05b0] added to domain SharpTest.exe, ref_count=1
+Mono: AOT: image '/home/hubert/SharpTest/SharpTest/bin/Debug/glib-sharp.dll.so' not found: /home/hubert/SharpTest/SharpTest/bin/Debug/glib-sharp.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu
+Mono: AOT: image '/usr/lib/mono/aot-cache/amd64/glib-sharp.dll.so' not found: /usr/lib/mono/aot-cache/amd64/glib-sharp.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu
+Mono: Assembly Loader loaded assembly from location: '/home/hubert/SharpTest/SharpTest/bin/Debug/glib-sharp.dll'.
+Mono: Config attempting to parse: '/home/hubert/SharpTest/SharpTest/bin/Debug/glib-sharp.dll.config'.
+Mono: Config attempting to parse: '/etc/mono/assemblies/glib-sharp/glib-sharp.config'.
+Mono: Assembly Ref addref gtk-sharp[0x558fa0ba28e0] -> glib-sharp[0x558fa0bb05b0]: 2
+Mono: Found assembly remapping for mscorlib and was for the same version 4.0.0.0
+Mono: Found assembly remapping for mscorlib and was for the same version 4.0.0.0
+Mono: Assembly Ref addref glib-sharp[0x558fa0bb05b0] -> mscorlib[0x558fa0b3d860]: 3
+Mono: Domain SharpTest.exe search path is:
+Mono: 	path[0] = '/home/hubert/SharpTest/SharpTest/bin/Debug/'
+Mono: End of domain SharpTest.exe search path.
+Mono: Assembly Loader probing location: '/home/hubert/SharpTest/SharpTest/bin/Debug/atk-sharp.dll'.
+Mono: Image addref atk-sharp[0x558fa0bb35a0] -> /home/hubert/SharpTest/SharpTest/bin/Debug/atk-sharp.dll[0x558fa0bb2440]: 2
+Mono: Prepared to set up assembly 'atk-sharp' (/home/hubert/SharpTest/SharpTest/bin/Debug/atk-sharp.dll)
+Mono: Assembly atk-sharp[0x558fa0bb35a0] added to domain SharpTest.exe, ref_count=1
+Mono: AOT: image '/home/hubert/SharpTest/SharpTest/bin/Debug/atk-sharp.dll.so' not found: /home/hubert/SharpTest/SharpTest/bin/Debug/atk-sharp.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu
+Mono: AOT: image '/usr/lib/mono/aot-cache/amd64/atk-sharp.dll.so' not found: /usr/lib/mono/aot-cache/amd64/atk-sharp.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu
+Mono: Assembly Loader loaded assembly from location: '/home/hubert/SharpTest/SharpTest/bin/Debug/atk-sharp.dll'.
+Mono: Config attempting to parse: '/home/hubert/SharpTest/SharpTest/bin/Debug/atk-sharp.dll.config'.
+Mono: Config attempting to parse: '/etc/mono/assemblies/atk-sharp/atk-sharp.config'.
+Mono: Assembly Ref addref gtk-sharp[0x558fa0ba28e0] -> atk-sharp[0x558fa0bb35a0]: 2
+Mono: Assembly Ref addref atk-sharp[0x558fa0bb35a0] -> glib-sharp[0x558fa0bb05b0]: 3
+Mono: Found assembly remapping for mscorlib and was for the same version 4.0.0.0
+Mono: Found assembly remapping for mscorlib and was for the same version 4.0.0.0
+Mono: Assembly Ref addref gtk-sharp[0x558fa0ba28e0] -> mscorlib[0x558fa0b3d860]: 4
+Mono: Domain SharpTest.exe search path is:
+Mono: 	path[0] = '/home/hubert/SharpTest/SharpTest/bin/Debug/'
+Mono: End of domain SharpTest.exe search path.
+Mono: Assembly Loader probing location: '/home/hubert/SharpTest/SharpTest/bin/Debug/gio-sharp.dll'.
+Mono: Image addref gio-sharp[0x558fa0bb7e70] -> /home/hubert/SharpTest/SharpTest/bin/Debug/gio-sharp.dll[0x558fa0bb6c30]: 2
+Mono: Prepared to set up assembly 'gio-sharp' (/home/hubert/SharpTest/SharpTest/bin/Debug/gio-sharp.dll)
+Mono: Assembly gio-sharp[0x558fa0bb7e70] added to domain SharpTest.exe, ref_count=1
+Mono: AOT: image '/home/hubert/SharpTest/SharpTest/bin/Debug/gio-sharp.dll.so' not found: /home/hubert/SharpTest/SharpTest/bin/Debug/gio-sharp.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu
+Mono: AOT: image '/usr/lib/mono/aot-cache/amd64/gio-sharp.dll.so' not found: /usr/lib/mono/aot-cache/amd64/gio-sharp.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu
+Mono: Assembly Loader loaded assembly from location: '/home/hubert/SharpTest/SharpTest/bin/Debug/gio-sharp.dll'.
+Mono: Config attempting to parse: '/home/hubert/SharpTest/SharpTest/bin/Debug/gio-sharp.dll.config'.
+Mono: Config attempting to parse: '/etc/mono/assemblies/gio-sharp/gio-sharp.config'.
+Mono: Assembly Ref addref gtk-sharp[0x558fa0ba28e0] -> gio-sharp[0x558fa0bb7e70]: 2
+Mono: Assembly Ref addref gio-sharp[0x558fa0bb7e70] -> glib-sharp[0x558fa0bb05b0]: 4
+Mono: Found assembly remapping for mscorlib and was for the same version 4.0.0.0
+Mono: Found assembly remapping for mscorlib and was for the same version 4.0.0.0
+Mono: Assembly Ref addref gio-sharp[0x558fa0bb7e70] -> mscorlib[0x558fa0b3d860]: 5
+Mono: DllImport attempting to load: 'libgtk-3-0.dll'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libgtk-3-0.dll': '/home/hubert/SharpTest/SharpTest/bin/Debug/libgtk-3-0.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libgtk-3-0.dll.so': '/home/hubert/SharpTest/SharpTest/bin/Debug/libgtk-3-0.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libgtk-3-0.dll': '/usr/lib/libgtk-3-0.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libgtk-3-0.dll.so': '/usr/lib/libgtk-3-0.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libgtk-3-0.dll': 'libgtk-3-0.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libgtk-3-0.dll.so': 'libgtk-3-0.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libgtk-3-0.dll': 'libgtk-3-0.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libgtk-3-0': '/home/hubert/SharpTest/SharpTest/bin/Debug/libgtk-3-0: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libgtk-3-0.so': '/home/hubert/SharpTest/SharpTest/bin/Debug/libgtk-3-0.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libgtk-3-0': '/usr/lib/libgtk-3-0: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libgtk-3-0.so': '/usr/lib/libgtk-3-0.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libgtk-3-0': 'libgtk-3-0: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libgtk-3-0.so': 'libgtk-3-0.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libgtk-3-0': 'libgtk-3-0: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport unable to load library 'libgtk-3-0: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport attempting to load: 'user32.dll'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32.dll': '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32.dll.so': '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libuser32.dll': '/usr/lib/libuser32.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libuser32.dll.so': '/usr/lib/libuser32.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libuser32.dll': 'libuser32.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libuser32.dll.so': 'libuser32.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'user32.dll': 'user32.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32': '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32.so': '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libuser32': '/usr/lib/libuser32: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libuser32.so': '/usr/lib/libuser32.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libuser32': 'libuser32: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libuser32.so': 'libuser32.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'user32': 'user32: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32.dll': '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32.dll.so': '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libuser32.dll': '/usr/lib/libuser32.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libuser32.dll.so': '/usr/lib/libuser32.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libuser32.dll': 'libuser32.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libuser32.dll.so': 'libuser32.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libuser32.dll': 'libuser32.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libMonoSupportW.so': '/home/hubert/SharpTest/SharpTest/bin/Debug/libMonoSupportW.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libMonoSupportW.so': '/home/hubert/SharpTest/SharpTest/bin/Debug/libMonoSupportW.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libMonoSupportW.so': '/usr/lib/libMonoSupportW.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libMonoSupportW.so': '/usr/lib/libMonoSupportW.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libMonoSupportW.so': 'libMonoSupportW.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libMonoSupportW.so': 'libMonoSupportW.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libMonoSupportW.so': 'libMonoSupportW.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport unable to load library 'libMonoSupportW.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport attempting to load: 'user32.dll'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32.dll': '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32.dll.so': '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libuser32.dll': '/usr/lib/libuser32.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libuser32.dll.so': '/usr/lib/libuser32.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libuser32.dll': 'libuser32.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libuser32.dll.so': 'libuser32.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'user32.dll': 'user32.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32': '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32.so': '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libuser32': '/usr/lib/libuser32: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libuser32.so': '/usr/lib/libuser32.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libuser32': 'libuser32: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libuser32.so': 'libuser32.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'user32': 'user32: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32.dll': '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32.dll.so': '/home/hubert/SharpTest/SharpTest/bin/Debug/libuser32.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libuser32.dll': '/usr/lib/libuser32.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libuser32.dll.so': '/usr/lib/libuser32.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libuser32.dll': 'libuser32.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libuser32.dll.so': 'libuser32.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libuser32.dll': 'libuser32.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libMonoSupportW.so': '/home/hubert/SharpTest/SharpTest/bin/Debug/libMonoSupportW.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libMonoSupportW.so': '/home/hubert/SharpTest/SharpTest/bin/Debug/libMonoSupportW.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libMonoSupportW.so': '/usr/lib/libMonoSupportW.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libMonoSupportW.so': '/usr/lib/libMonoSupportW.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libMonoSupportW.so': 'libMonoSupportW.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libMonoSupportW.so': 'libMonoSupportW.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libMonoSupportW.so': 'libMonoSupportW.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport unable to load library 'libMonoSupportW.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: AOT NOT FOUND: (wrapper runtime-invoke) object:runtime_invoke_void (object,intptr,intptr,intptr).
+Mono: DllImport attempting to load: 'libgobject-2.0-0.dll'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libgobject-2.0-0.dll': '/home/hubert/SharpTest/SharpTest/bin/Debug/libgobject-2.0-0.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libgobject-2.0-0.dll.so': '/home/hubert/SharpTest/SharpTest/bin/Debug/libgobject-2.0-0.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libgobject-2.0-0.dll': '/usr/lib/libgobject-2.0-0.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libgobject-2.0-0.dll.so': '/usr/lib/libgobject-2.0-0.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libgobject-2.0-0.dll': 'libgobject-2.0-0.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libgobject-2.0-0.dll.so': 'libgobject-2.0-0.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libgobject-2.0-0.dll': 'libgobject-2.0-0.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libgobject-2.0-0': '/home/hubert/SharpTest/SharpTest/bin/Debug/libgobject-2.0-0: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libgobject-2.0-0.so': '/home/hubert/SharpTest/SharpTest/bin/Debug/libgobject-2.0-0.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libgobject-2.0-0': '/usr/lib/libgobject-2.0-0: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libgobject-2.0-0.so': '/usr/lib/libgobject-2.0-0.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libgobject-2.0-0': 'libgobject-2.0-0: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libgobject-2.0-0.so': 'libgobject-2.0-0.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libgobject-2.0-0': 'libgobject-2.0-0: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport unable to load library 'libgobject-2.0-0: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: AOT NOT FOUND: (wrapper runtime-invoke) object:runtime_invoke_void (object,intptr,intptr,intptr).
+Mono: AOT NOT FOUND: System.Collections.Generic.Dictionary`2<intptr, System.Type>:.ctor ().
+Mono: AOT NOT FOUND: System.Collections.Generic.Dictionary`2<intptr, System.Type>:.ctor (int,System.Collections.Generic.IEqualityComparer`1<intptr>).
+Mono: AOT NOT FOUND: System.Collections.Generic.EqualityComparer`1<intptr>:get_Default ().
+Mono: AOT NOT FOUND: System.Collections.Generic.EqualityComparer`1<intptr>:CreateComparer ().
+Mono: AOT: FOUND method System.RuntimeType:.cctor () [0x7fecd7024e90 - 0x7fecd702500b 0x7fecd737d038]
+Mono: AOT: FOUND method System.RuntimeType:IsAssignableFrom (System.Type) [0x7fecd701e230 - 0x7fecd701e3c8 0x7fecd737ccb8]
+Mono: AOT: FOUND method System.RuntimeType:get_UnderlyingSystemType () [0x7fecd701e5f0 - 0x7fecd701e600 0x7fecd737ccda]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.RuntimeTypeHandle:type_is_assignable_from (System.Type,System.Type).
+Mono: AOT: FOUND method string:memset (byte*,int,int) [0x7fecd7030830 - 0x7fecd7030958 0x7fecd737d3a8]
+Mono: AOT: FOUND method System.RuntimeType:get_IsGenericType () [0x7fecd701f490 - 0x7fecd701f4a2 0x7fecd737cd9d]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.RuntimeTypeHandle:HasInstantiation (System.RuntimeType).
+Mono: AOT: FOUND method System.RuntimeType:get_IsEnum () [0x7fecd701e7c0 - 0x7fecd701e7e7 0x7fecd737cd1e]
+Mono: AOT: FOUND method System.RuntimeType:GetBaseType () [0x7fecd701e460 - 0x7fecd701e5ef 0x7fecd737cccd]
+Mono: AOT: FOUND method System.__Filters:.cctor () [0x7fecd6fd03f0 - 0x7fecd6fd0417 0x7fecd737a203]
+Mono: AOT: FOUND method System.Reflection.Missing:.cctor () [0x7fecd70b2fb0 - 0x7fecd70b2fd7 0x7fecd7380f52]
+Mono: AOT: FOUND method System.EmptyArray`1:.cctor () [0x7fecd705c0e0 - 0x7fecd705c116 0x7fecd737ec49]
+Mono: AOT NOT FOUND: (wrapper runtime-invoke) object:runtime_invoke_void (object,intptr,intptr,intptr).
+Mono: AOT NOT FOUND: (wrapper alloc) object:AllocVector (intptr,intptr).
+Mono: AOT: FOUND method System.Type:.cctor () [0x7fecd7047650 - 0x7fecd70477f6 0x7fecd737ddc2]
+Mono: AOT: FOUND method System.Type:get_IsInterface () [0x7fecd70454e0 - 0x7fecd704556d 0x7fecd737dbd5]
+Mono: AOT: FOUND method System.RuntimeType:GetAttributeFlagsImpl () [0x7fecd701e600 - 0x7fecd701e612 0x7fecd737ccdf]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.RuntimeTypeHandle:GetAttributes (System.RuntimeType).
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.RuntimeTypeHandle:IsGenericVariable (System.RuntimeType).
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.RuntimeTypeHandle:GetBaseType (System.RuntimeType).
+Mono: AOT NOT FOUND: System.Collections.Generic.Dictionary`2<System.Type, GLib.GType>:.ctor ().
+Mono: AOT NOT FOUND: System.Collections.Generic.Dictionary`2<System.Type, GLib.GType>:.ctor (int,System.Collections.Generic.IEqualityComparer`1<System.Type>).
+Mono: AOT: FOUND method System.Collections.Generic.EqualityComparer`1:get_Default () [0x7fecd730ed30 - 0x7fecd730ed8e 0x7fecd7393693]
+Mono: AOT: FOUND method System.Collections.Generic.EqualityComparer`1:CreateComparer () [0x7fecd730ed90 - 0x7fecd730f1ab 0x7fecd7393695]
+Mono: AOT: FOUND method System.Collections.Generic.ObjectEqualityComparer`1:.ctor () [0x7fecd7310160 - 0x7fecd731016d 0x7fecd73936e4]
+Mono: DllImport attempting to load: 'libgobject-2.0-0.dll'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libgobject-2.0-0.dll': '/home/hubert/SharpTest/SharpTest/bin/Debug/libgobject-2.0-0.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libgobject-2.0-0.dll.so': '/home/hubert/SharpTest/SharpTest/bin/Debug/libgobject-2.0-0.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libgobject-2.0-0.dll': '/usr/lib/libgobject-2.0-0.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libgobject-2.0-0.dll.so': '/usr/lib/libgobject-2.0-0.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libgobject-2.0-0.dll': 'libgobject-2.0-0.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libgobject-2.0-0.dll.so': 'libgobject-2.0-0.dll.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libgobject-2.0-0.dll': 'libgobject-2.0-0.dll: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libgobject-2.0-0': '/home/hubert/SharpTest/SharpTest/bin/Debug/libgobject-2.0-0: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/home/hubert/SharpTest/SharpTest/bin/Debug/libgobject-2.0-0.so': '/home/hubert/SharpTest/SharpTest/bin/Debug/libgobject-2.0-0.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libgobject-2.0-0': '/usr/lib/libgobject-2.0-0: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library '/usr/lib/libgobject-2.0-0.so': '/usr/lib/libgobject-2.0-0.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libgobject-2.0-0': 'libgobject-2.0-0: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libgobject-2.0-0.so': 'libgobject-2.0-0.so: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport error loading library 'libgobject-2.0-0': 'libgobject-2.0-0: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: DllImport unable to load library 'libgobject-2.0-0: nie można otworzyć pliku obiektu dzielonego: Nie ma takiego pliku ani katalogu'.
+Mono: AOT: FOUND method System.DllNotFoundException:.ctor () [0x7fecd6ff6ab0 - 0x7fecd6ff6ad8 0x7fecd737ba3e]
+Mono: AOT NOT FOUND: (wrapper runtime-invoke) object:runtime_invoke_void__this__ (object,intptr,intptr,intptr).
+Mono: AOT NOT FOUND: (wrapper managed-to-native) object:__icall_wrapper_mono_string_new_wrapper (intptr).
+Mono: AOT: FOUND method System.TypeInitializationException:.ctor (string,System.Exception) [0x7fecd7047ed0 - 0x7fecd7047f77 0x7fecd737de1e]
+Mono: AOT NOT FOUND: (wrapper runtime-invoke) <Module>:runtime_invoke_void__this___object_object (object,intptr,intptr,intptr).
+Mono: AOT NOT FOUND: (wrapper stelemref) object:virt_stelemref_object (intptr,object).
+Mono: AOT: FOUND method System.Globalization.CultureInfo:.cctor () [0x7fecd7154460 - 0x7fecd71544be 0x7fecd738532b]
+Mono: AOT: FOUND method System.Globalization.CultureInfo:.ctor (int,bool,bool) [0x7fecd7150af0 - 0x7fecd7150fd2 0x7fecd738512f]
+Mono: AOT: FOUND method System.Globalization.CalendarData:.cctor () [0x7fecd710bd60 - 0x7fecd710ca98 0x7fecd73832f0]
+Mono: AOT: FOUND method System.Globalization.CalendarData:.ctor () [0x7fecd710bd40 - 0x7fecd710bd5a 0x7fecd73832eb]
+Mono: AOT NOT FOUND: (wrapper stelemref) object:virt_stelemref_sealed_class (intptr,object).
+Mono: AOT: FOUND method System.Globalization.CultureData:get_Invariant () [0x7fecd713ad80 - 0x7fecd713b135 0x7fecd73849a9]
+Mono: AOT NOT FOUND: (wrapper stelemref) object:virt_stelemref_class_small_idepth (intptr,object).
+Mono: AOT: FOUND method System.Globalization.CultureInfo:ConstructInvariant (bool) [0x7fecd7150870 - 0x7fecd7150a3a 0x7fecd738510e]
+Mono: AOT: FOUND method System.Globalization.NumberFormatInfo:get_InvariantInfo () [0x7fecd7128450 - 0x7fecd71284b3 0x7fecd73842cc]
+Mono: AOT: FOUND method System.Globalization.NumberFormatInfo:.ctor (System.Globalization.CultureData) [0x7fecd7127ea0 - 0x7fecd712840a 0x7fecd7384294]
+Mono: AOT: FOUND method System.Globalization.NumberFormatInfo:ReadOnly (System.Globalization.NumberFormatInfo) [0x7fecd7129db0 - 0x7fecd7129e50 0x7fecd7384383]
+Mono: AOT NOT FOUND: (wrapper remoting-invoke-with-check) object:MemberwiseClone ().
+Mono: AOT NOT FOUND: (wrapper managed-to-native) object:MemberwiseClone (object).
+Mono: AOT: FOUND method System.Globalization.TextInfo:get_Invariant () [0x7fecd712bf10 - 0x7fecd712bf70 0x7fecd73844fe]
+Mono: AOT: FOUND method System.Environment:GetResourceString (string,object[]) [0x7fecd7051c80 - 0x7fecd7051cc0 0x7fecd737e347]
+Mono: AOT: FOUND method string:Format (System.IFormatProvider,string,object[]) [0x7fecd702d990 - 0x7fecd702da5a 0x7fecd737d305]
+Mono: AOT: FOUND method System.Text.StringBuilderCache:Acquire (int) [0x7fecd708cdb0 - 0x7fecd708ceac 0x7fecd73800d2]
+Mono: AOT: FOUND method System.Text.StringBuilder:.ctor (int) [0x7fecd7087ec0 - 0x7fecd7087eea 0x7fecd737ffc6]
+Mono: AOT: FOUND method System.Text.StringBuilder:.ctor (string,int,int,int) [0x7fecd7087f80 - 0x7fecd70881f2 0x7fecd737ffcd]
+Mono: AOT: FOUND method System.Text.StringBuilder:AppendFormatHelper (System.IFormatProvider,string,System.ParamsArray) [0x7fecd708add0 - 0x7fecd708b6a0 0x7fecd738008b]
+Mono: AOT: FOUND method System.Globalization.CultureInfo:GetFormat (System.Type) [0x7fecd71507c0 - 0x7fecd715083c 0x7fecd7385100]
+Mono: AOT: FOUND method string:ToString () [0x7fecd702cd20 - 0x7fecd702cd30 0x7fecd737d2d6]
+Mono: AOT: FOUND method System.Text.StringBuilder:ToString () [0x7fecd7088900 - 0x7fecd7088a81 0x7fecd737ffff]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) string:FastAllocateString (int).
+Mono: AOT: FOUND method System.Text.StringBuilderCache:Release (System.Text.StringBuilder) [0x7fecd708ceb0 - 0x7fecd708cf19 0x7fecd73800db]
+Mono: AOT: FOUND method System.Text.StringBuilder:set_Length (int) [0x7fecd7088d70 - 0x7fecd7088f1a 0x7fecd7380008]
+Mono: AOT: FOUND method System.Text.StringBuilder:ExpandByABlock (int) [0x7fecd708c5e0 - 0x7fecd708c742 0x7fecd73800c4]
+Mono: AOT: FOUND method System.Exception:ToString () [0x7fecd6ffbef0 - 0x7fecd6ffbf0c 0x7fecd737be33]
+Mono: AOT NOT FOUND: (wrapper runtime-invoke) <Module>:runtime_invoke_object__this__ (object,intptr,intptr,intptr).
+Mono: AOT: FOUND method System.Exception:ToString (bool,bool) [0x7fecd6ffbf10 - 0x7fecd6ffc0eb 0x7fecd737be38]
+Mono: AOT: FOUND method System.Exception:get_Message () [0x7fecd6ffb760 - 0x7fecd6ffb800 0x7fecd737bdad]
+Mono: AOT: FOUND method System.RuntimeType:ToString () [0x7fecd7024630 - 0x7fecd7024646 0x7fecd737cfdf]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.RuntimeType:getFullName (System.RuntimeType,bool,bool).
+Mono: AOT: FOUND method string:Concat (string,string,string) [0x7fecd702e380 - 0x7fecd702e45d 0x7fecd737d337]
+Mono: AOT: FOUND method System.TypeLoadException:get_Message () [0x7fecd7048130 - 0x7fecd704814a 0x7fecd737de39]
+Mono: AOT: FOUND method System.TypeLoadException:SetMessageField () [0x7fecd7048150 - 0x7fecd7048275 0x7fecd737de3b]
+Mono: AOT: FOUND method System.Environment:GetStackTrace (System.Exception,bool) [0x7fecd7053a80 - 0x7fecd7053b0f 0x7fecd737e47b]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.Diagnostics.StackTrace:get_trace (System.Exception,int,bool).
+Mono: AOT: FOUND method System.Diagnostics.StackTrace:ToString () [0x7fecd71df760 - 0x7fecd71df86a 0x7fecd73897cb]
+Mono: AOT: FOUND method System.Diagnostics.StackTrace:AddFrames (System.Text.StringBuilder) [0x7fecd71deec0 - 0x7fecd71df3f1 0x7fecd7389795]
+Mono: AOT: FOUND method System.Environment:get_NewLine () [0x7fecd7052050 - 0x7fecd7052090 0x7fecd737e377]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.Environment:GetNewLine ().
+Mono: AOT: FOUND method System.ParamsArray:.cctor () [0x7fecd701a210 - 0x7fecd701a273 0x7fecd737cab3]
+Mono: AOT: FOUND method System.ParamsArray:.ctor (object,object,object) [0x7fecd7019f60 - 0x7fecd701a01b 0x7fecd737ca98]
+Mono: AOT: FOUND method System.Array:Copy (System.Array,int,System.Array,int,int) [0x7fecd6fc5f90 - 0x7fecd6fc6398 0x7fecd7379bfd]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.Array:FastCopy (System.Array,int,System.Array,int,int).
+Mono: AOT: FOUND method System.Diagnostics.StackTrace:get_FrameCount () [0x7fecd71ded20 - 0x7fecd71ded49 0x7fecd738977d]
+Mono: AOT: FOUND method System.Diagnostics.StackTrace:GetFrame (int) [0x7fecd71ded50 - 0x7fecd71dedb0 0x7fecd738977f]
+Mono: AOT: FOUND method System.ParamsArray:.ctor (object,object) [0x7fecd7019ec0 - 0x7fecd7019f54 0x7fecd737ca91]
+Mono: AOT: FOUND method System.Diagnostics.StackFrame:GetMethod () [0x7fecd71de6a0 - 0x7fecd71de6b4 0x7fecd7389742]
+Mono: AOT: FOUND method System.Reflection.MethodBase:op_Equality (System.Reflection.MethodBase,System.Reflection.MethodBase) [0x7fecd70b1d90 - 0x7fecd70b1ede 0x7fecd7380e80]
+Mono: AOT: FOUND method System.Diagnostics.StackTrace:GetFullNameForStackTrace (System.Text.StringBuilder,System.Reflection.MethodBase) [0x7fecd71df400 - 0x7fecd71df75f 0x7fecd73897ba]
+Mono: AOT: FOUND method System.Reflection.MonoCMethod:get_DeclaringType () [0x7fecd70c1950 - 0x7fecd70c196a 0x7fecd73817cb]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.Reflection.MonoMethodInfo:get_method_info (intptr,System.Reflection.MonoMethodInfo&).
+Mono: AOT: FOUND method System.RuntimeType:GetMethods (System.Reflection.BindingFlags) [0x7fecd701c900 - 0x7fecd701c95a 0x7fecd737cba6]
+Mono: AOT: FOUND method System.RuntimeType:GetMethodCandidates (string,System.Reflection.BindingFlags,System.Reflection.CallingConventions,System.Type[],bool) [0x7fecd701bd00 - 0x7fecd701bec7 0x7fecd737cb6a]
+Mono: AOT: FOUND method System.RuntimeType:FilterHelper (System.Reflection.BindingFlags,string&,bool,bool&,bool&,System.RuntimeType/MemberListType&) [0x7fecd701b420 - 0x7fecd701b56c 0x7fecd737cb2c]
+Mono: AOT: FOUND method System.RuntimeType:GetMethodsByName (string,System.Reflection.BindingFlags,bool,System.RuntimeType) [0x7fecd70237d0 - 0x7fecd70239d0 0x7fecd737cf75]
+Mono: AOT: FOUND method Mono.SafeStringMarshal:get_Value () [0x7fecd6f4b9e0 - 0x7fecd6f4ba2d 0x7fecd7377268]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.RuntimeType:GetMethodsByName_native (System.RuntimeType,intptr,System.Reflection.BindingFlags,bool).
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.Reflection.MethodBase:GetMethodFromHandleInternalType_native (intptr,intptr,bool).
+Mono: AOT NOT FOUND: (wrapper managed-to-native) Mono.RuntimeGPtrArrayHandle:GPtrArrayFree (Mono.RuntimeStructs/GPtrArray*).
+Mono: AOT: FOUND method Mono.SafeStringMarshal:Dispose () [0x7fecd6f4ba30 - 0x7fecd6f4ba7a 0x7fecd737726b]
+Mono: AOT: FOUND method System.RuntimeType/ListBuilder`1:.ctor (int) [0x7fecd7025010 - 0x7fecd7025051 0x7fecd737d061]
+Mono: AOT: FOUND method System.RuntimeType:FilterApplyMethodBase (System.Reflection.MethodBase,System.Reflection.BindingFlags,System.Reflection.BindingFlags,System.Reflection.CallingConventions,System.Type[]) [0x7fecd701b990 - 0x7fecd701bc46 0x7fecd737cb55]
+Mono: AOT: FOUND method System.RuntimeType/ListBuilder`1:Add (T) [0x7fecd7025220 - 0x7fecd7025346 0x7fecd737d06b]
+Mono: AOT: FOUND method System.RuntimeType/ListBuilder`1:ToArray () [0x7fecd70250c0 - 0x7fecd7025189 0x7fecd737d065]
+Mono: AOT: FOUND method System.Array:Resize<T> (T[]&,int) [0x7fecd6fc0890 - 0x7fecd6fc09d5 0x7fecd7379aa1]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.Reflection.MemberInfo:get_MetadataToken (System.Reflection.MemberInfo).
+Mono: AOT: FOUND method System.Reflection.MonoCMethod:get_Name () [0x7fecd70c1970 - 0x7fecd70c199c 0x7fecd73817cd]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.Reflection.MonoMethod:get_name (System.Reflection.MethodBase).
+Mono: AOT: FOUND method System.Reflection.MethodBase:get_IsGenericMethod () [0x7fecd70b2030 - 0x7fecd70b203b 0x7fecd7380e9e]
+Mono: AOT: FOUND method System.Reflection.MonoCMethod:GetParameters () [0x7fecd70c1500 - 0x7fecd70c1519 0x7fecd73817b3]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.Reflection.MonoMethodInfo:get_parameter_info (intptr,System.Reflection.MemberInfo).
+Mono: AOT: FOUND method System.Diagnostics.StackFrame:GetILOffset () [0x7fecd71de680 - 0x7fecd71de694 0x7fecd7389740]
+Mono: AOT: FOUND method System.ParamsArray:.ctor (object) [0x7fecd7019e40 - 0x7fecd7019eb2 0x7fecd737ca8a]
+Mono: AOT: FOUND method int:ToString (string,System.IFormatProvider) [0x7fecd7013480 - 0x7fecd70134be 0x7fecd737c727]
+Mono: AOT: FOUND method System.Globalization.NumberFormatInfo:GetInstance (System.IFormatProvider) [0x7fecd71284c0 - 0x7fecd71285e0 0x7fecd73842d6]
+Mono: AOT: FOUND method System.Globalization.NumberFormatInfo:get_CurrentInfo () [0x7fecd7128ec0 - 0x7fecd7128f4f 0x7fecd738431c]
+Mono: AOT: FOUND method System.Threading.Thread:get_CurrentThread () [0x7fecd7168b30 - 0x7fecd7168b8b 0x7fecd7385e62]
+Mono: AOT: FOUND method System.Threading.Thread:GetCurrentCultureNoAppX () [0x7fecd7167e60 - 0x7fecd7167f24 0x7fecd7385e04]
+Mono: AOT: FOUND method System.Globalization.CultureInfo:ConstructCurrentCulture () [0x7fecd714e790 - 0x7fecd714e867 0x7fecd7384f87]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.Globalization.CultureInfo:get_current_locale_name ().
+Mono: AOT: FOUND method System.Globalization.CultureInfo:CreateSpecificCulture (string) [0x7fecd7151940 - 0x7fecd7151d91 0x7fecd7385193]
+Mono: AOT: FOUND method string:ToLowerInvariant () [0x7fecd702cc20 - 0x7fecd702cc56 0x7fecd737d2ca]
+Mono: AOT: FOUND method System.Globalization.CultureInfo:get_TextInfo () [0x7fecd714f9b0 - 0x7fecd714fa95 0x7fecd7385060]
+Mono: AOT: FOUND method System.Globalization.TextInfo:ToLower (string) [0x7fecd712c7c0 - 0x7fecd712c807 0x7fecd7384540]
+Mono: AOT: FOUND method System.Globalization.TextInfo:ToLowerInternal (string) [0x7fecd712d430 - 0x7fecd712d4f4 0x7fecd738457a]
+Mono: AOT: FOUND method System.Globalization.TextInfo:ToLower (char) [0x7fecd712c740 - 0x7fecd712c7b1 0x7fecd738453e]
+Mono: AOT: FOUND method System.Globalization.TextInfo:get_IsAsciiCasingSameAsInvariant () [0x7fecd712c980 - 0x7fecd712ca70 0x7fecd738454c]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.Globalization.CultureInfo:construct_internal_locale_from_name (System.Globalization.CultureInfo,string).
+Mono: AOT: FOUND method System.Globalization.CultureInfo:get_IsNeutralCulture () [0x7fecd7150420 - 0x7fecd7150467 0x7fecd73850ca]
+Mono: AOT: FOUND method System.Globalization.CultureInfo:get_CalendarType () [0x7fecd7153ec0 - 0x7fecd7153f43 0x7fecd73852bf]
+Mono: AOT NOT FOUND: (wrapper managed-to-managed) string:.ctor (char,int).
+Mono: AOT: FOUND method string:CreateString (char,int) [0x7fecd7030c20 - 0x7fecd7030ce5 0x7fecd737d3cb]
+Mono: AOT: FOUND method System.Globalization.CultureData:GetCultureData (string,bool,int,int,int,string,int,int,int,int,bool,string) [0x7fecd713b1d0 - 0x7fecd713b30a 0x7fecd73849d6]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.Globalization.CultureData:fill_culture_data (System.Globalization.CultureData,int).
+Mono: AOT: FOUND method System.Globalization.CultureInfo:get_NumberFormat () [0x7fecd7150480 - 0x7fecd7150510 0x7fecd73850d4]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.Globalization.CultureData:fill_number_data (System.Globalization.NumberFormatInfo,int).
+Mono: AOT: FOUND method System.NumberFormatter:.cctor () [0x7fecd7060910 - 0x7fecd7060948 0x7fecd737ef88]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.NumberFormatter:GetFormatterTables (ulong*&,int*&,char*&,char*&,long*&,int*&).
+Mono: AOT: FOUND method System.NumberFormatter:NumberToString (string,int,System.IFormatProvider) [0x7fecd7062640 - 0x7fecd70626be 0x7fecd737f0a9]
+Mono: AOT: FOUND method System.NumberFormatter:GetInstance (System.IFormatProvider) [0x7fecd7062300 - 0x7fecd7062530 0x7fecd737f07b]
+Mono: AOT: FOUND method System.EmptyArray`1<char>:.cctor () [0x7fecd7322700 - 0x7fecd7322724 0x7fecd7393f4d]
+Mono: AOT: FOUND method System.NumberFormatter:.ctor (System.Threading.Thread) [0x7fecd70610c0 - 0x7fecd7061129 0x7fecd737efe3]
+Mono: AOT: FOUND method System.NumberFormatter:Init (string,int,int) [0x7fecd70612d0 - 0x7fecd7061370 0x7fecd737eff4]
+Mono: AOT: FOUND method System.NumberFormatter:Init (string) [0x7fecd7061130 - 0x7fecd706124e 0x7fecd737efea]
+Mono: AOT: FOUND method System.NumberFormatter:ParsePrecision (string) [0x7fecd7061010 - 0x7fecd70610b7 0x7fecd737efde]
+Mono: AOT: FOUND method System.NumberFormatter:InitHex (ulong) [0x7fecd7061250 - 0x7fecd70612cb 0x7fecd737efef]
+Mono: AOT: FOUND method System.NumberFormatter:DecHexLen () [0x7fecd7060ec0 - 0x7fecd7060f31 0x7fecd737efcf]
+Mono: AOT: FOUND method System.NumberFormatter:DecHexLen (uint) [0x7fecd7060e90 - 0x7fecd7060ebe 0x7fecd737efca]
+Mono: AOT: FOUND method System.NumberFormatter:FastDecHexLen (int) [0x7fecd7060e50 - 0x7fecd7060e8f 0x7fecd737efc5]
+Mono: AOT: FOUND method System.NumberFormatter:IntegerToString (string,System.IFormatProvider) [0x7fecd7062a70 - 0x7fecd7062c2e 0x7fecd737f0c7]
+Mono: AOT: FOUND method System.NumberFormatter:GetNumberFormatInstance (System.IFormatProvider) [0x7fecd7061c70 - 0x7fecd7061cac 0x7fecd737f030]
+Mono: AOT: FOUND method System.NumberFormatter:FormatHexadecimal (int) [0x7fecd7063330 - 0x7fecd7063425 0x7fecd737f0e5]
+Mono: AOT: FOUND method System.NumberFormatter:ResetCharBuf (int) [0x7fecd70619c0 - 0x7fecd7061a23 0x7fecd737f016]
+Mono: AOT NOT FOUND: (wrapper managed-to-managed) string:.ctor (char[],int,int).
+Mono: AOT: FOUND method string:CreateString (char[],int,int) [0x7fecd7030bd0 - 0x7fecd7030bf1 0x7fecd737d3c7]
+Mono: AOT: FOUND method string:CtorCharArrayStartLength (char[],int,int) [0x7fecd702a320 - 0x7fecd702a4df 0x7fecd737d22b]
+Mono: AOT: FOUND method System.NumberFormatter:Release () [0x7fecd7062530 - 0x7fecd70625bb 0x7fecd737f099]
+Mono: AOT: FOUND method System.Diagnostics.StackFrame:GetSecureFileName () [0x7fecd71de600 - 0x7fecd71de671 0x7fecd738973c]
+Mono: AOT: FOUND method System.Reflection.RuntimeConstructorInfo:get_Module () [0x7fecd70c1240 - 0x7fecd70c1252 0x7fecd7381799]
+Mono: AOT: FOUND method System.Reflection.RuntimeConstructorInfo:GetRuntimeModule () [0x7fecd70c1260 - 0x7fecd70c12ba 0x7fecd738179b]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.RuntimeTypeHandle:GetModule (System.RuntimeType).
+Mono: AOT: FOUND method System.Reflection.MonoModule:get_ModuleVersionId () [0x7fecd70c1cf0 - 0x7fecd70c1d3b 0x7fecd73817f9]
+Mono: AOT: FOUND method System.Reflection.Module:.cctor () [0x7fecd70bdef0 - 0x7fecd70bdf97 0x7fecd7381649]
+Mono: AOT: FOUND method System.Reflection.Module:GetModuleVersionId () [0x7fecd70bd6e0 - 0x7fecd70bd76b 0x7fecd738157b]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.Reflection.Module:GetGuidInternal (System.Reflection.Module).
+Mono: AOT: FOUND method System.Guid:.cctor () [0x7fecd7012180 - 0x7fecd70121c9 0x7fecd737c67b]
+Mono: AOT: FOUND method System.Guid:.ctor (string) [0x7fecd700d040 - 0x7fecd700d277 0x7fecd737c52b]
+Mono: AOT: FOUND method System.Guid:TryParseGuid (string,System.Guid/GuidStyles,System.Guid/GuidResult&) [0x7fecd700dcf0 - 0x7fecd700dff6 0x7fecd737c562]
+Mono: AOT: FOUND method string:CreateTrimmedString (int,int) [0x7fecd702d020 - 0x7fecd702d085 0x7fecd737d2e4]
+Mono: AOT: FOUND method System.Guid:TryParseGuidWithDashes (string,System.Guid/GuidResult&) [0x7fecd700e8e0 - 0x7fecd700ecb7 0x7fecd737c5b2]
+Mono: AOT: FOUND method System.Guid:StringToInt (string,int*,int,int,int&,System.Guid/GuidResult&) [0x7fecd700ee30 - 0x7fecd700f0c1 0x7fecd737c5da]
+Mono: AOT: FOUND method char:.cctor () [0x7fecd6fdc580 - 0x7fecd6fdc5c4 0x7fecd737a876]
+Mono: AOT: FOUND method char:IsNumber (char) [0x7fecd6fdb000 - 0x7fecd6fdb0ec 0x7fecd737a7d0]
+Mono: AOT: FOUND method char:IsLetter (char) [0x7fecd6fd9d30 - 0x7fecd6fd9e22 0x7fecd737a6e5]
+Mono: AOT: FOUND method char:ToLowerInvariant (char) [0x7fecd6fda390 - 0x7fecd6fda3c6 0x7fecd737a73c]
+Mono: AOT: FOUND method System.Guid:ToString (string,System.IFormatProvider) [0x7fecd7011780 - 0x7fecd7011e2c 0x7fecd737c64e]
+Mono: AOT: FOUND method System.Diagnostics.StackTrace:GetAotId () [0x7fecd71dedd0 - 0x7fecd71deeb6 0x7fecd7389783]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.Reflection.Assembly:GetAotId ().
+Mono: AOT: FOUND method System.Diagnostics.StackFrame:GetFileLineNumber () [0x7fecd71de5a0 - 0x7fecd71de5b4 0x7fecd7389736]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) object:__icall_wrapper_mono_gc_alloc_obj (intptr,intptr).
+Mono: AOT: FOUND method System.NumberFormatter:FormatDecimal (int,System.Globalization.NumberFormatInfo) [0x7fecd70632a0 - 0x7fecd706332b 0x7fecd737f0de]
+Mono: AOT: FOUND method string:Concat (string,string) [0x7fecd702e280 - 0x7fecd702e374 0x7fecd737d334]
+Mono: AOT: FOUND method string:Concat (string[]) [0x7fecd702e650 - 0x7fecd702e78a 0x7fecd737d346]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) object:__icall_wrapper_mono_gc_alloc_vector (intptr,intptr,intptr).
+Mono: AOT: FOUND method System.Reflection.MonoMethod:get_DeclaringType () [0x7fecd70c0b40 - 0x7fecd70c0b5a 0x7fecd7381775]
+Mono: AOT: FOUND method System.Reflection.MonoMethod:get_Name () [0x7fecd70c0b60 - 0x7fecd70c0b8c 0x7fecd7381777]
+Mono: AOT NOT FOUND: (wrapper managed-to-native) System.Reflection.MonoMethod:get_IsGenericMethod (System.Reflection.MonoMethod).
+Mono: AOT: FOUND method System.Reflection.MonoMethod:GetParameters () [0x7fecd70c06d0 - 0x7fecd70c0733 0x7fecd738175b]
+Mono: AOT: FOUND method System.DBNull:.cctor () [0x7fecd6fed250 - 0x7fecd6fed277 0x7fecd737b6e7]
+Mono: AOT: FOUND method System.Reflection.ParameterInfo:get_ParameterType () [0x7fecd70c4740 - 0x7fecd70c4754 0x7fecd7381906]
+Mono: AOT: FOUND method System.Reflection.ParameterInfo:get_Name () [0x7fecd70c4890 - 0x7fecd70c48a4 0x7fecd7381916]
+Mono: AOT: FOUND method System.Reflection.RuntimeMethodInfo:get_Module () [0x7fecd70c01a0 - 0x7fecd70c01b2 0x7fecd738172a]
+Mono: AOT: FOUND method System.Reflection.RuntimeMethodInfo:GetRuntimeModule () [0x7fecd70c03e0 - 0x7fecd70c043e 0x7fecd738173f]
