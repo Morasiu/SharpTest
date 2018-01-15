@@ -6,36 +6,33 @@ namespace SharpTest{
         public static void Main(string[] args){
             Application.Init();
 
-            var myWin = new Window("Sharp Test");
-            myWin.Resize(600, 400);
-            myWin.SetIconFromFile("/home/hubert/SharpTest/SharpTest/images/icon.png");
+            var window = new Window("Sharp Test");
+            window.Resize(600, 400);
+            window.SetIconFromFile("/home/hubert/SharpTest/SharpTest/images/icon.png");
+            window.DeleteEvent += new DeleteEventHandler (Window_Delete);
+
+            var fileButton = new FileChooserButton("Choose file", FileChooserAction.Open);
             
-            var fileButton = new Button("Choose file", IconSize.Button, OpenDialog(myWin));
+            var scanButton = new Button("Scan");
+            scanButton.Clicked += new EventHandler(ScanFile);
             
             var boxMain = new VBox();
             boxMain.PackStart(fileButton, false, true, 5);
-            myWin.Add(boxMain);
+            boxMain.PackStart(scanButton, false, false, 5);
+            window.Add(boxMain);
 
-            myWin.ShowAll();
+            window.ShowAll();
             Application.Run();
 
         }
 
-        static string OpenDialog(Window win){
-            FileChooserDialog filechooser =
-                new FileChooserDialog("Choose the file to open",
-                    this,
-                    FileChooserAction.Open,
-                    "Cancel",ResponseType.Cancel,
-                    "Open",ResponseType.Accept);
+        private static void Window_Delete(object o, DeleteEventArgs args){
+            Application.Quit ();
+            args.RetVal = true;
+        }
 
-            if (filechooser.Run() == (int)ResponseType.Accept) 
-            {
-                System.IO.FileStream file = System.IO.File.OpenRead(filechooser.Filename);
-                file.Close();
-            }
-
-            filechooser.Destroy();
+        private static void ScanFile(object sender, EventArgs eventArgs){
+            
         }
     }
 }
