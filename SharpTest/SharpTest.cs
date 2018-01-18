@@ -4,35 +4,56 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Gtk;
+using Application = Gtk.Application;
+using Process = System.Diagnostics.Process;
+using Window = Gtk.Window;
 
 namespace SharpTest{
     internal static class SharpTest{
-        private static string osVersion = Environment.OSVersion.ToString();
-        
-        public static void Main(string[] args){
-            Application.Init();
+        private static readonly string OsVersion = Environment.OSVersion.ToString();
+        private static readonly string PythonVer = CheckPython();
 
+        public static void Main(){
+            Application.Init();
+            
+            
             var window = new Window("Sharp Test");
             window.Resize(600, 400);
             window.SetIconFromFile("/home/hubert/SharpTest/SharpTest/images/icon.png");
             window.DeleteEvent += Window_Delete;
-
+            
             var fileButton = new FileChooserButton("Choose file", FileChooserAction.Open);
             
             var scanButton = new Button("Scan file");
             scanButton.SetSizeRequest(100, 50);
-            scanButton.Clicked += (obj, evt) => ScanFile (fileButton.Filename);
+            scanButton.Clicked += (sender, args) => ScanFile(fileButton.Filename);
+
+            var labelOsName = new Label("OS Version: " + OsVersion);
             
-            Console.WriteLine(Environment.OSVersion);
+            var labelPyhtonVer = new Label("Python ver: " + PythonVer);
+            
+            var labelChoose = new Label("Choose python file.");
+
+            var labelFileStatus = new Label{Markup = "<span color=\"red\">Wrong file.</span>"};
+
+            
+            var labelTest = new Label("Test");
             
             var boxMain = new VBox();
+            boxMain.PackStart(labelOsName, false,false, 5);
+            boxMain.PackStart(labelPyhtonVer, false, false, 5);
+            boxMain.PackStart(labelChoose, false, false, 5);
             boxMain.PackStart(fileButton, false, false, 5);
+            boxMain.PackStart(labelFileStatus, false, false, 5);
             boxMain.PackStart(scanButton, false, false, 100);
-            window.Add(boxMain);
+            boxMain.PackStart(labelTest, true, true, 5);
 
+         
+            
+            
+            window.Add(boxMain);
             window.ShowAll();
             Application.Run();
-
         }
 
         private static void Window_Delete(object o, DeleteEventArgs args){
@@ -40,7 +61,7 @@ namespace SharpTest{
             args.RetVal = true;
         }
 
-        private static void ScanFile(string filename){
+        private static string ScanFile(string filename){
             if (filename.Contains(".py")){
                 Console.WriteLine("Scaning starterd. File: " + filename.Split('/').Last());
                 var rawText = File.ReadAllText(filename);
@@ -49,16 +70,36 @@ namespace SharpTest{
                 Console.WriteLine(isOOP ? "Detected objected programing." : "Detected script without OOP.");
                 TestScriptLinux(filename, "Shababa\n");
                 Console.WriteLine(text[1]);
-            }
-            else{
-                Console.WriteLine("Not python :(");
-            }
+                return "Scan";
+;            }
+            Console.WriteLine("Not python :(");
+            return "Wrong file";
         }
 
         private static bool IsOOP(IEnumerable<string> text){
             return text.Any(line => line.Contains("class"));
         }
 
+        
+        private static void TestScriptLinux(string fileName, string shouldReturn){
+            var p = new Process{
+                StartInfo = new ProcessStartInfo(@"/usr/bin/python", fileName){
+                    RedirectStandardOutput = true,
+                    UseShellExecute = false,
+                    CreateNoWindow = true
+                }
+            };
+            p.Start();
+
+            var output = p.StandardOutput.ReadToEnd();
+            
+            if (output == shouldReturn)
+                Console.WriteLine("Hurra");
+            
+            p.WaitForExit();
+        }
+        
+        
         private static void TestScriptWindows(string fileName){
 
             var p = new Process{
@@ -74,25 +115,35 @@ namespace SharpTest{
             p.WaitForExit();
 
             Console.WriteLine(output);
-
-            Console.ReadLine();
         }
-        
-        private static void TestScriptLinux(string fileName, string shouldReturn){
+
+        private static string CheckPython(){
+            var processInfo = new string[2];
+            if(OsVersion.Contains("Unix")){
+                //Linux
+                processInfo[0] = "/usr/bin/python";
+                processInfo[1] = "--version";
+            }
+            else{
+                //Windows
+                processInfo[0] = "cmd.exe";
+                processInfo[1] = "python --version";
+            }
+
             var p = new Process{
-                StartInfo = new ProcessStartInfo(@"/usr/bin/python", fileName){
-                    RedirectStandardOutput = true,
+                StartInfo = new ProcessStartInfo{
+                    FileName = processInfo[0],
+                    Arguments = processInfo[1],
+                    RedirectStandardError = true,
                     UseShellExecute = false,
                     CreateNoWindow = true
                 }
             };
             p.Start();
-
-            var output = p.StandardOutput.ReadToEnd();
-            if (output == shouldReturn){
-                Console.WriteLine("Hurra");
-            }
+            
+            var output = p.StandardError.ReadToEnd();
             p.WaitForExit();
+            return output;
         }
     }
 }
