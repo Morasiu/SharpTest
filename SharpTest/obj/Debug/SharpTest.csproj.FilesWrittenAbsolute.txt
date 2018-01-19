@@ -12,3 +12,5 @@
 /home/hubert/SharpTest/SharpTest/obj/Debug/SharpTest.pdb
 /home/hubert/SharpTest/SharpTest/bin/Debug/gtk-dotnet.dll
 /home/hubert/SharpTest/SharpTest/bin/Debug/glade-sharp.dll
+/home/hubert/SharpTest/SharpTest/bin/Debug/Mono.CSharp.dll
+/home/hubert/SharpTest/SharpTest/bin/Debug/System.dll

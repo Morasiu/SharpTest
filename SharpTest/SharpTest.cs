@@ -15,71 +15,84 @@ namespace SharpTest{
 
         public static void Main(){
             Application.Init();
-            
-            
             var window = new Window("Sharp Test");
             window.Resize(600, 400);
             window.SetIconFromFile("/home/hubert/SharpTest/SharpTest/images/icon.png");
             window.DeleteEvent += Window_Delete;
-            
-            var fileButton = new FileChooserButton("Choose file", FileChooserAction.Open);
-            
-            var scanButton = new Button("Scan file");
-            scanButton.SetSizeRequest(100, 50);
-            scanButton.Clicked += (sender, args) => ScanFile(fileButton.Filename);
-
+            //File choosing components
             var labelOsName = new Label("OS Version: " + OsVersion);
             
             var labelPyhtonVer = new Label("Python ver: " + PythonVer);
             
             var labelChoose = new Label("Choose python file.");
-
+            
             var labelFileStatus = new Label{Markup = "<span color=\"red\">Wrong file.</span>"};
-
             
-            var labelTest = new Label("Test");
+            var fileButton = new FileChooserButton("Choose file", FileChooserAction.Open);
             
-            var boxMain = new VBox();
-            boxMain.PackStart(labelOsName, false,false, 5);
-            boxMain.PackStart(labelPyhtonVer, false, false, 5);
-            boxMain.PackStart(labelChoose, false, false, 5);
-            boxMain.PackStart(fileButton, false, false, 5);
-            boxMain.PackStart(labelFileStatus, false, false, 5);
-            boxMain.PackStart(scanButton, false, false, 100);
-            boxMain.PackStart(labelTest, true, true, 5);
-
-         
+            var scanButton = new Button("Scan file");
+            scanButton.SetSizeRequest(100, 50);
             
+            var boxStart = new VBox();
+            boxStart.PackStart(labelOsName, false,false, 5);
+            boxStart.PackStart(labelPyhtonVer, false, false, 5);
+            boxStart.PackStart(labelChoose, false, false, 5);
+            boxStart.PackStart(fileButton, false, false, 5);
+            boxStart.PackStart(labelFileStatus, false, false, 5);
+            boxStart.PackStart(scanButton, false, false, 100);
             
-            window.Add(boxMain);
+            //Scaning window components
+            var labelTest = new Label("Error while scanning file");
+            labelTest.SetPadding(5, 5);
+            
+            var scrolledWin = new ScrolledWindow();
+            scrolledWin.SetPolicy(PolicyType.Automatic, PolicyType.Automatic);
+            scrolledWin.Add(labelTest);
+        
+            var boxScan = new VBox();
+            boxScan.PackStart(scrolledWin, true, true, 5);
+            
+            scanButton.Clicked += (sender, args) => {
+                var result = ScanFile(fileButton.Filename);
+                if(result.Contains("Wrong file"))
+                    labelFileStatus.Show();
+                else{
+                    labelFileStatus.Hide();
+                    labelTest.Text = result[0];
+                    window.Remove(boxStart);
+                    window.Add(boxScan);
+                    window.ShowAll();
+                }
+            };
+            
+            window.Add(boxStart);
             window.ShowAll();
+            //Hide some widgets
+            
+            labelFileStatus.Hide();
             Application.Run();
         }
 
-        private static void Window_Delete(object o, DeleteEventArgs args){
-            Application.Quit ();
-            args.RetVal = true;
-        }
-
-        private static string ScanFile(string filename){
+        private static string[] ScanFile(string filename){
             if (filename.Contains(".py")){
                 Console.WriteLine("Scaning starterd. File: " + filename.Split('/').Last());
                 var rawText = File.ReadAllText(filename);
-                var text = rawText.Split(new[] {"\r\n", "\r", "\n"}, StringSplitOptions.None);
+                var text = rawText.Split(new[]{"\r\n", "\r", "\n"}, StringSplitOptions.None);
                 var isOOP = IsOOP(text);
                 Console.WriteLine(isOOP ? "Detected objected programing." : "Detected script without OOP.");
                 TestScriptLinux(filename, "Shababa\n");
                 Console.WriteLine(text[1]);
-                return "Scan";
-;            }
+                string[] scan = {"Scan"};
+                return scan;
+            }
             Console.WriteLine("Not python :(");
-            return "Wrong file";
+            string[] scanError = {"Wrong file"};
+            return scanError;
         }
 
         private static bool IsOOP(IEnumerable<string> text){
             return text.Any(line => line.Contains("class"));
         }
-
         
         private static void TestScriptLinux(string fileName, string shouldReturn){
             var p = new Process{
@@ -98,7 +111,6 @@ namespace SharpTest{
             
             p.WaitForExit();
         }
-        
         
         private static void TestScriptWindows(string fileName){
 
@@ -144,6 +156,11 @@ namespace SharpTest{
             var output = p.StandardError.ReadToEnd();
             p.WaitForExit();
             return output;
+        }
+        
+        private static void Window_Delete(object o, DeleteEventArgs args){
+            Application.Quit ();
+            args.RetVal = true;
         }
     }
 }
