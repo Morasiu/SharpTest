@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -58,7 +59,7 @@ namespace SharpTest{
                     labelFileStatus.Show();
                 else{
                     labelFileStatus.Hide();
-                    labelTest.Text = result[0];
+                    labelTest.Text = "HAHA";
                     window.Remove(boxStart);
                     window.Add(boxScan);
                     window.ShowAll();
@@ -73,23 +74,43 @@ namespace SharpTest{
             Application.Run();
         }
 
-        private static string[] ScanFile(string filename){
+        private static Hashtable ScanFile(string filename){
             if (filename.Contains(".py")){
+                var result = new Hashtable();
                 Console.WriteLine("Scaning starterd. File: " + filename.Split('/').Last());
                 var rawText = File.ReadAllText(filename);
                 var text = rawText.Split(new[]{"\r\n", "\r", "\n"}, StringSplitOptions.None);
                 var isOOP = IsOOP(text);
-                Console.WriteLine(isOOP ? "Detected objected programing." : "Detected script without OOP.");
+                //Check if scipt is using OOP
+                if (isOOP){
+                    Console.WriteLine("Detected objected programing.");
+                    //Get List of all classes
+                    result = GetFileStructure(text);
+                }
+                else{
+                    Console.WriteLine("Detected script without OOP.");
+                }
                 TestScriptLinux(filename, "Shababa\n");
-                Console.WriteLine(text[1]);
-                string[] scan = {"Scan"};
-                return scan;
+                return result;
             }
             Console.WriteLine("Not python :(");
-            string[] scanError = {"Wrong file"};
+            var scanError = new Hashtable{{"Error", "Wrong file"}};
             return scanError;
         }
 
+
+        
+        private static Hashtable GetFileStructure(IEnumerable<string> lines){
+            var structure = new Hashtable();
+            var classNames = new List<string>();
+            foreach (var line in lines){
+                if (line.Contains("class")){
+                    classNames.Add(line.Split()[1].Split(':')[0]);
+                }
+            }
+            return structure;
+        }
+        
         private static bool IsOOP(IEnumerable<string> text){
             return text.Any(line => line.Contains("class"));
         }
