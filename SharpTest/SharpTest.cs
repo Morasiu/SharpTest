@@ -97,17 +97,17 @@ namespace SharpTest{
             var scanError = new Hashtable{{"Error", "Wrong file"}};
             return scanError;
         }
-
-
         
         private static Hashtable GetFileStructure(IEnumerable<string> lines){
             var structure = new Hashtable();
             var classNames = new List<string>();
+            
             foreach (var line in lines){
                 if (line.Contains("class")){
                     classNames.Add(line.Split()[1].Split(':')[0]);
                 }
             }
+            
             return structure;
         }
         
