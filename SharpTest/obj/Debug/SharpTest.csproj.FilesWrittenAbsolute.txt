@@ -14,3 +14,4 @@
 /home/hubert/SharpTest/SharpTest/bin/Debug/glade-sharp.dll
 /home/hubert/SharpTest/SharpTest/bin/Debug/Mono.CSharp.dll
 /home/hubert/SharpTest/SharpTest/bin/Debug/System.dll
+/home/hubert/SharpTest/SharpTest/bin/Debug/Newtonsoft.Json.dll

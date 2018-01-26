@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using Newtonsoft.Json;
 using Gtk;
 using Application = Gtk.Application;
 using Process = System.Diagnostics.Process;
@@ -59,7 +60,7 @@ namespace SharpTest{
                     labelFileStatus.Show();
                 else{
                     labelFileStatus.Hide();
-                    labelTest.Text = "HAHA";
+                    labelTest.Text = "Hurray!!! (^.^)";
                     window.Remove(boxStart);
                     window.Add(boxScan);
                     window.ShowAll();
@@ -86,6 +87,8 @@ namespace SharpTest{
                     Console.WriteLine("Detected objected programing.");
                     //Get List of all classes
                     result = GetFileStructure(text);
+                    string json = JsonConvert.SerializeObject(result);
+                    Console.WriteLine(json);
                 }
                 else{
                     Console.WriteLine("Detected script without OOP.");
@@ -100,13 +103,46 @@ namespace SharpTest{
         
         private static Hashtable GetFileStructure(IEnumerable<string> lines){
             var structure = new Hashtable();
-            var classNames = new List<string>();
+            var methodList = new List<Hashtable>();
+            var returnValue = "";
+            var body = "";
+            var className = "";
             
             foreach (var line in lines){
-                if (line.Contains("class")){
-                    classNames.Add(line.Split()[1].Split(':')[0]);
+                if (line.Contains("class") && !line.Contains('\'') && !line.Contains('#') &&!line.Contains('\"') && !line.Contains("def")){
+                    if (className != "" && methodList.Count > 0){
+                        structure.Add(className, new List<Hashtable>(methodList));
+                        methodList.Clear();
+                    }
+                    className = line.Split()[1].Split(':')[0];
+                } else if (line.Contains("def")&& !line.Contains('\'') && !line.Contains('#') &&!line.Contains('\"')){
+                    var methodInfo = new Hashtable();
+
+                    var cleaLine = line.Replace(" ", string.Empty);
+                    //Get name of method
+                    var methodName = cleaLine.Substring(cleaLine.IndexOf("def", StringComparison.Ordinal) +3, cleaLine.LastIndexOf('(')-3);
+                    //Get params passed to method
+                    var methodParams = cleaLine.Substring(cleaLine.IndexOf('(') + 1 , cleaLine.IndexOf(')') - cleaLine.LastIndexOf('(') - 1).Split(',');
+                    //get return
+                    
+                    //get body
+                    methodInfo.Add("name", methodName);
+                    methodInfo.Add("param", methodParams);
+                    methodInfo.Add("return", returnValue);
+                    methodInfo.Add("body", body);
+                    methodList.Add(methodInfo);
+                    returnValue = "";
+                    body = "";
+
+                } else if (line.Contains("return")&& !line.Contains('\'') && !line.Contains('#') &&!line.Contains('\"')){
+                    var cleaLine = line.Replace(" ", string.Empty);
+                    returnValue = cleaLine.Substring(cleaLine.IndexOf("return", StringComparison.Ordinal) + 6);
+                }
+                else{
+                    body += line + "\n";
                 }
             }
+            structure.Add(className, methodList);
             
             return structure;
         }
