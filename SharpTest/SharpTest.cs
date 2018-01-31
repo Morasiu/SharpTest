@@ -54,13 +54,39 @@ namespace SharpTest{
             var boxScan = new VBox();
             boxScan.PackStart(scrolledWin, true, true, 5);
             
+            
             scanButton.Clicked += (sender, args) => {
                 var result = ScanFile(fileButton.Filename);
-                if(result.Contains("Wrong file"))
+                if(result == null)
                     labelFileStatus.Show();
                 else{
                     labelFileStatus.Hide();
-                    labelTest.Text = "Hurray!!! (^.^)";
+                    var structure = "";
+                    var classes = new List<string>(result.Keys);
+                    //Add classes
+                    foreach (var _class in classes){
+                        structure += "Class: " + _class + "\n";
+                        foreach (var method in result[_class]){
+                            //Add method name                       
+                            structure += "|__ Method: " + method["name"] + "\n";
+                            //Add params
+                            var parameters = "";
+                            int i = 0;
+                            foreach (var param in (IEnumerable) method["param"]){
+                                if (i > 0)
+                                    parameters += ",";
+                                parameters += " " + param;
+                                i++;
+                            }
+                            structure += "|____ Params: " + parameters + "\n";
+                            //Add return
+                            structure += "|____ Return: " + method["return"] + "\n";
+                        }
+
+                        structure += "\n";
+                    }
+                    
+                    labelTest.Text = structure;
                     window.Remove(boxStart);
                     window.Add(boxScan);
                     window.ShowAll();
@@ -75,9 +101,9 @@ namespace SharpTest{
             Application.Run();
         }
 
-        private static Hashtable ScanFile(string filename){
+        private static Dictionary<string, List<Hashtable>> ScanFile(string filename){
             if (filename.Contains(".py")){
-                var result = new Hashtable();
+                var result = new Dictionary<string, List<Hashtable>>();
                 Console.WriteLine("Scaning starterd. File: " + filename.Split('/').Last());
                 var rawText = File.ReadAllText(filename);
                 var text = rawText.Split(new[]{"\r\n", "\r", "\n"}, StringSplitOptions.None);
@@ -97,12 +123,12 @@ namespace SharpTest{
                 return result;
             }
             Console.WriteLine("Not python :(");
-            var scanError = new Hashtable{{"Error", "Wrong file"}};
+            var scanError = new Dictionary<string, List<Hashtable>>();
             return scanError;
         }
         
-        private static Hashtable GetFileStructure(IEnumerable<string> lines){
-            var structure = new Hashtable();
+        private static Dictionary<string, List<Hashtable>> GetFileStructure(IEnumerable<string> lines){
+            var structure = new Dictionary<string, List<Hashtable>>();
             var methodList = new List<Hashtable>();
             var returnValue = "";
             var body = "";
@@ -123,9 +149,7 @@ namespace SharpTest{
                     var methodName = cleaLine.Substring(cleaLine.IndexOf("def", StringComparison.Ordinal) +3, cleaLine.LastIndexOf('(')-3);
                     //Get params passed to method
                     var methodParams = cleaLine.Substring(cleaLine.IndexOf('(') + 1 , cleaLine.IndexOf(')') - cleaLine.LastIndexOf('(') - 1).Split(',');
-                    //get return
                     
-                    //get body
                     methodInfo.Add("name", methodName);
                     methodInfo.Add("param", methodParams);
                     methodInfo.Add("return", returnValue);
