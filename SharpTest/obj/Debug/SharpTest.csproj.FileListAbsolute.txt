@@ -1,0 +1,2 @@
+D:\Projekt\SharpTest\SharpTest\obj\Debug\SharpTest.exe
+D:\Projekt\SharpTest\SharpTest\obj\Debug\SharpTest.pdb

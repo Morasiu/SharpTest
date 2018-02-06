@@ -19,7 +19,7 @@ namespace SharpTest{
             Application.Init();
             var window = new Window("Sharp Test");
             window.Resize(600, 400);
-            window.SetIconFromFile("/home/hubert/SharpTest/SharpTest/images/icon.png");
+            //window.SetIconFromFile("/home/hubert/SharpTest/SharpTest/images/icon.png");
             window.DeleteEvent += Window_Delete;
             //File choosing components
             var labelOsName = new Label("OS Version: " + OsVersion);
